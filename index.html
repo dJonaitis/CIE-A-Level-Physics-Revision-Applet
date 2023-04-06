@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Physics Revision</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.19/dist/katex.min.css">
+</head>
+<body>
+  <div class="container mt-5" id="main">
+    <h1 class="text-center">Physics Revision</h1>
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-3">
+        <div class="text-center">
+          <a href="#" class="btn btn-primary mr-2" id="defs" onclick="select('def')">Definitions</a>
+          <a href="#" class="btn btn-primary" id="forms" onclick="select('form')">Formulas (not implemented)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none flashcard-container container mt-5 text-center" id="revision">
+      <h1 id="question" class="text-center">...</h1>
+      <h4 id="answerDefinition" style="display:none;"></h4>
+      <h4 id="answerFormula" style="display:none;"></h4>
+      <button id="reveal-btn" class="btn btn-primary custom-button" onclick="revealAnswer()">Reveal Answer</button>
+    <div id="feedback-buttons" style="display:none;">
+      <button class="btn btn-primary" onclick="answer(true)">Correct</button>
+      <button class="btn btn-primary" onclick="answer(false)">Incorrect</button>
+    </div>
+    <p id="score">Score: 0</p>
+  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.13.19/dist/katex.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
